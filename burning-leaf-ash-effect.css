@@ -1,0 +1,321 @@
+/* ========================================
+   BURNING PLANT LEAF ASH EFFECT
+   Complete CSS code for the background effect
+   ======================================== */
+
+/* Burning Plant Leaf Ash Particles Across Entire Page */
+.ash-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.ash-particle {
+  position: absolute;
+  width: 12px;
+  height: 8px;
+  background: 
+    /* Leaf shape with burning edges */ linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.9) 0%,
+      rgba(255, 165, 0, 0.8) 15%,
+      rgba(255, 69, 0, 0.9) 40%,
+      rgba(139, 0, 0, 1) 70%,
+      rgba(0, 0, 0, 0.8) 100%
+    ),
+    radial-gradient(
+      ellipse 60% 40% at 30% 50%,
+      rgba(255, 140, 0, 0.6) 0%,
+      rgba(255, 69, 0, 0.4) 50%,
+      transparent 100%
+    );
+  border-radius: 60% 40% 60% 40%;
+  box-shadow: 0 0 8px rgba(255, 140, 66, 0.8), 0 0 16px rgba(255, 107, 53, 0.6),
+    0 0 24px rgba(255, 69, 0, 0.4), inset 0 0 2px rgba(255, 255, 255, 0.3),
+    inset 0 0 4px rgba(255, 140, 0, 0.2);
+  animation: burningLeafFall var(--duration) linear infinite;
+  opacity: 0;
+  transform-origin: center;
+}
+
+.ash-particle::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: -6px;
+  right: -6px;
+  bottom: -6px;
+  background: radial-gradient(
+    ellipse 80% 60% at 40% 50%,
+    rgba(255, 140, 0, 0.5) 0%,
+    rgba(255, 69, 0, 0.3) 40%,
+    rgba(255, 165, 0, 0.2) 70%,
+    transparent 100%
+  );
+  border-radius: 70% 50% 70% 50%;
+  animation: leafGlow var(--duration) ease-in-out infinite;
+}
+
+.ash-particle::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 8px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(139, 69, 19, 0.8) 0%,
+    rgba(160, 82, 45, 0.6) 50%,
+    transparent 100%
+  );
+  border-radius: 50%;
+  transform: rotate(-15deg);
+}
+
+/* Ash particles distributed across entire width */
+.ash-particle:nth-child(1) {
+  left: 5%;
+  --duration: 12s;
+  animation-delay: 0s;
+}
+.ash-particle:nth-child(2) {
+  left: 15%;
+  --duration: 14s;
+  animation-delay: 1.5s;
+}
+.ash-particle:nth-child(3) {
+  left: 25%;
+  --duration: 10s;
+  animation-delay: 3s;
+}
+.ash-particle:nth-child(4) {
+  left: 35%;
+  --duration: 16s;
+  animation-delay: 4.5s;
+}
+.ash-particle:nth-child(5) {
+  left: 45%;
+  --duration: 11s;
+  animation-delay: 6s;
+}
+.ash-particle:nth-child(6) {
+  left: 55%;
+  --duration: 13s;
+  animation-delay: 7.5s;
+}
+.ash-particle:nth-child(7) {
+  left: 65%;
+  --duration: 15s;
+  animation-delay: 9s;
+}
+.ash-particle:nth-child(8) {
+  left: 75%;
+  --duration: 9s;
+  animation-delay: 10.5s;
+}
+.ash-particle:nth-child(9) {
+  left: 85%;
+  --duration: 17s;
+  animation-delay: 12s;
+}
+.ash-particle:nth-child(10) {
+  left: 95%;
+  --duration: 12.5s;
+  animation-delay: 13.5s;
+}
+.ash-particle:nth-child(11) {
+  left: 10%;
+  --duration: 14.5s;
+  animation-delay: 15s;
+}
+.ash-particle:nth-child(12) {
+  left: 30%;
+  --duration: 11.5s;
+  animation-delay: 16.5s;
+}
+.ash-particle:nth-child(13) {
+  left: 50%;
+  --duration: 13.5s;
+  animation-delay: 18s;
+}
+.ash-particle:nth-child(14) {
+  left: 70%;
+  --duration: 10.5s;
+  animation-delay: 19.5s;
+}
+.ash-particle:nth-child(15) {
+  left: 90%;
+  --duration: 16.5s;
+  animation-delay: 21s;
+}
+
+/* ========================================
+   ANIMATIONS
+   ======================================== */
+
+@keyframes burningLeafFall {
+  0% {
+    top: -30px;
+    opacity: 0;
+    transform: translateX(0px) translateY(0px) rotate(0deg) scale(0.3)
+      rotateY(0deg);
+    filter: brightness(0.5) hue-rotate(0deg);
+  }
+  5% {
+    opacity: 0.8;
+    transform: translateX(8px) translateY(40px) rotate(60deg) scale(0.7)
+      rotateY(30deg);
+    filter: brightness(1.4) hue-rotate(10deg);
+  }
+  12% {
+    opacity: 1;
+    transform: translateX(-12px) translateY(100px) rotate(150deg) scale(1)
+      rotateY(60deg);
+    filter: brightness(1.6) hue-rotate(20deg);
+  }
+  20% {
+    opacity: 0.95;
+    transform: translateX(18px) translateY(180px) rotate(240deg) scale(1.1)
+      rotateY(90deg);
+    filter: brightness(1.3) hue-rotate(15deg);
+  }
+  35% {
+    opacity: 0.9;
+    transform: translateX(-22px) translateY(300px) rotate(360deg) scale(0.9)
+      rotateY(120deg);
+    filter: brightness(1.1) hue-rotate(5deg);
+  }
+  50% {
+    opacity: 0.85;
+    transform: translateX(28px) translateY(450px) rotate(480deg) scale(0.8)
+      rotateY(180deg);
+    filter: brightness(0.9) hue-rotate(-5deg);
+  }
+  65% {
+    opacity: 0.7;
+    transform: translateX(-35px) translateY(600px) rotate(600deg) scale(0.7)
+      rotateY(240deg);
+    filter: brightness(0.7) hue-rotate(-10deg);
+  }
+  80% {
+    opacity: 0.5;
+    transform: translateX(42px) translateY(750px) rotate(720deg) scale(0.5)
+      rotateY(300deg);
+    filter: brightness(0.5) hue-rotate(-15deg);
+  }
+  92% {
+    opacity: 0.3;
+    transform: translateX(-48px) translateY(900px) rotate(840deg) scale(0.3)
+      rotateY(360deg);
+    filter: brightness(0.3) hue-rotate(-20deg);
+  }
+  100% {
+    top: 100vh;
+    opacity: 0;
+    transform: translateX(55px) translateY(1100px) rotate(960deg) scale(0.1)
+      rotateY(420deg);
+    filter: brightness(0.1) hue-rotate(-25deg);
+  }
+}
+
+@keyframes leafGlow {
+  0%,
+  100% {
+    opacity: 0.6;
+    transform: scale(1) rotate(0deg);
+  }
+  15% {
+    opacity: 1;
+    transform: scale(1.3) rotate(5deg);
+  }
+  30% {
+    opacity: 0.8;
+    transform: scale(1.1) rotate(-3deg);
+  }
+  45% {
+    opacity: 1.1;
+    transform: scale(1.4) rotate(7deg);
+  }
+  60% {
+    opacity: 0.7;
+    transform: scale(1.2) rotate(-2deg);
+  }
+  75% {
+    opacity: 0.9;
+    transform: scale(1.25) rotate(4deg);
+  }
+  90% {
+    opacity: 0.65;
+    transform: scale(1.15) rotate(-1deg);
+  }
+}
+
+/* ========================================
+   HTML STRUCTURE NEEDED
+   ======================================== */
+
+/*
+<div className="ash-container">
+  <div className="ash-particle"></div>
+  <div className="ash-particle"></div>
+  <div className="ash-particle"></div>
+  <div className="ash-particle"></div>
+  <div className="ash-particle"></div>
+  <div className="ash-particle"></div>
+  <div className="ash-particle"></div>
+  <div className="ash-particle"></div>
+  <div className="ash-particle"></div>
+  <div className="ash-particle"></div>
+  <div className="ash-particle"></div>
+  <div className="ash-particle"></div>
+  <div className="ash-particle"></div>
+  <div className="ash-particle"></div>
+  <div className="ash-particle"></div>
+</div>
+*/
+
+/* ========================================
+   EFFECT FEATURES
+   ======================================== */
+
+/*
+✨ BURNING PLANT LEAF ASH FEATURES:
+
+🍃 Realistic Leaf Shape:
+- Organic leaf-like border-radius (60% 40% 60% 40%)
+- Natural leaf vein detail with ::after pseudo-element
+- Asymmetric shape for authentic appearance
+
+🔥 Burning Effect:
+- Multi-layer gradient from white-hot center to charred edges
+- Individual glowing aura around each leaf
+- Realistic burning colors (white → orange → red → black)
+
+💫 Complex Animation:
+- 3D rotation with rotateY for depth
+- Realistic falling physics with drift and tumble
+- Brightness and hue changes during fall
+- Scale variations for perspective
+
+🌟 Individual Light Sources:
+- Each leaf has its own glowing aura (::before)
+- Dynamic glow animation synchronized with fall
+- Realistic light emission patterns
+
+📍 Full Page Coverage:
+- 15 particles distributed across entire width (5% to 95%)
+- Varied timing (10s to 17s) for natural randomness
+- Staggered delays for continuous effect
+
+🎨 Visual Impact:
+- No background light source - pure ash effect
+- Maintains content readability
+- Atmospheric without overwhelming
+- Professional yet striking appearance
+*/

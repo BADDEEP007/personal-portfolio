@@ -1,0 +1,165 @@
+/* Navigation Styles */
+.main-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(147, 51, 234, 0.2);
+  z-index: 1000;
+  padding: 0;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-logo-icon {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #9333ea;
+}
+
+.nav-logo-icon img {
+  height: 40px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-link {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: #9333ea;
+  background: rgba(147, 51, 234, 0.1);
+}
+
+.nav-link.active {
+  color: #9333ea;
+  background: rgba(147, 51, 234, 0.2);
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 2px;
+  background: #9333ea;
+  border-radius: 1px;
+}
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: #e5e7eb;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.mobile-menu-btn:hover {
+  color: #9333ea;
+  background: rgba(147, 51, 234, 0.1);
+}
+
+.mobile-nav-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.98);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(147, 51, 234, 0.2);
+  padding: 1rem 0;
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.mobile-nav-menu.open {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0 2rem;
+}
+
+.mobile-nav-links .nav-link {
+  padding: 1rem;
+  text-align: center;
+  border-radius: 0.5rem;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .nav-container {
+    padding: 1rem;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .mobile-nav-menu {
+    display: block;
+  }
+}
+
+/* Add top padding to body to account for fixed navbar */
+body {
+  padding-top: 80px;
+}
+
+/* Page content adjustment */
+.main-home-page,
+.about-page,
+.expertise-page,
+.works-page,
+.contact-page {
+  padding-top: 2rem;
+}
