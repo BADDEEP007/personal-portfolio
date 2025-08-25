@@ -59,11 +59,6 @@ ADMIN_PASSWORD=your-password
 REACT_APP_API_URL=https://your-backend-url.vercel.app
 ```
 
-## 🎯 Admin Access
-
-- **URL**: `https://your-site.vercel.app/admin`
-- **Username**: `Toki007`
-- **Password**: `Baddeep007`
 
 ## 📊 Features Overview
 

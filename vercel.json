@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "portfolio-frontend",
+
   "builds": [
     {
       "src": "package.json",

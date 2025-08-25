@@ -1,10 +1,10 @@
-import React from "react";
+// Removed unused React import
 import {useState ,useEffect}  from "react";
 import { Link } from "react-router-dom";
 import "./ExpertisePage.css";
 
 import logo from '../Assests/logo.png'
-import react from "react";
+// Removed unused react import
 
 function ExpertisePage() {
   const skills = [

@@ -17,6 +17,7 @@ const AdminPanel = () => {
       setIsAuthenticated(true);
       fetchAnalytics();
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleLogin = async (e) => {

@@ -4,7 +4,7 @@ const API_CONFIG = {
     baseURL: 'http://localhost:5000'
   },
   production: {
-    baseURL: process.env.REACT_APP_API_URL || 'https://portfolio-backend-baddeep.vercel.app'
+    baseURL: process.env.REACT_APP_API_URL || 'https://portfolio-backend-q32uwahl2-baddeeps-projects.vercel.app'
   }
 };
 

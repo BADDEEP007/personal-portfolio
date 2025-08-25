@@ -28,7 +28,10 @@
     "server:prod": "cd server && npm start",
     "dev": "concurrently \"npm start\" \"npm run server\"",
     "install-server": "cd server && npm install",
-    "build-full": "npm run build && cd server && npm install --production"
+    "build-full": "npm run build && cd server && npm install --production",
+    "deploy-frontend": "vercel --prod",
+    "deploy-backend": "cd server && vercel --prod",
+    "deploy-all": "npm run deploy-backend && npm run deploy-frontend"
   },
   "eslintConfig": {
     "extends": [

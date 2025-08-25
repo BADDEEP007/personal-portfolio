@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import profile from "../Assests/homepage.png";
 import "./HomePage.css";
 import mento from '../Assests/favicon.ico'
-import logo from '../Assests/logo.png'
+// Removed unused logo import
 import resume from '../Assests/pradeepArgal.pdf'
 
 function MainHomePage() {
@@ -51,7 +51,7 @@ function MainHomePage() {
             <div className="project-info">
               <div className="project-badge">Most Popular</div>
               <h3 className="project-title">
-              <img src={mento} className='mento-logo'></img>
+              <img src={mento} className='mento-logo' alt="Mento.in logo"></img>
                 Mento.in - Mental Wellness Platform
               </h3>
               <p className="project-description">
@@ -111,7 +111,7 @@ function MainHomePage() {
                 <div className="window-content">
                   <div className="demo-interface">
                     <div className="demo-header">
-                    <img src={mento} className='mento-logo'></img>
+                    <img src={mento} className='mento-logo' alt="Mento.in demo logo"></img>
                       <div className="demo-logo">
                     
                         Mento.in</div>
@@ -146,7 +146,7 @@ function MainHomePage() {
                 <div className="card-badge">Live</div>
               </div>
               <div className='mento-logo-name' >
-              <img src={mento} className='mento-logo'></img>
+              <img src={mento} className='mento-logo' alt="Mento.in card logo"></img>
               <h3 className="card-title">Mento.in</h3>
 
               </div>

@@ -242,6 +242,7 @@ function AboutPage() {
               <a
                 href={resume}
                 target="_blank"
+                rel="noreferrer"
                 className="  cta-btn secondary"
               >
                 <span >📄</span> Download Resume
