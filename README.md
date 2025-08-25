@@ -14,10 +14,10 @@ A modern portfolio website with contact form, email notifications, and admin ana
 ## 🚀 Quick Deploy
 
 ### Deploy Backend
-[![Deploy Backend to Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/BADDEEP007/portfolio&project-name=portfolio-backend&root-directory=server)
+[![Deploy Backend to Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/BADDEEP007/personal-portfolio&project-name=portfolio-backend&root-directory=server)
 
 ### Deploy Frontend  
-[![Deploy Frontend to Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/BADDEEP007/portfolio&project-name=portfolio-frontend)
+[![Deploy Frontend to Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/BADDEEP007/personal-portfolio&project-name=portfolio-frontend)
 
 ## 🔧 Manual Deployment
 
