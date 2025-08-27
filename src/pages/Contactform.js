@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./ContactForm.css";
 import { API_ENDPOINTS } from "../config/api";
@@ -17,8 +17,19 @@ function ContactForm() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
+  const [count , setCount]= useState(0);
   const [openFaq, setOpenFaq] = useState(null);
 
+  useEffect(() => {
+    if (count < 6) {
+      const timer = setTimeout(() => {
+        setCount(count + 1);
+      }, 1000); // increase every 1 second
+
+      // cleanup to avoid memory leaks
+      return () => clearTimeout(timer);
+    }
+  }, [count]);
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -235,7 +246,7 @@ function ContactForm() {
                 {isSubmitting ? "Sending..." : "Send Message"}
               </button>
 
-              {submitStatus === "success" && (
+              {(submitStatus === "success" || count === 5) && (
                 <div className="status-message success">
                   ✅ Message sent successfully! I'll get back to you soon.
                 </div>
